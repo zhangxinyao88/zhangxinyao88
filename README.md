@@ -26,5 +26,5 @@ Outside work, I'm interested in AI agents, CI/CD, developer experience, open sou
 ## GitHub activity
 
 <a href="https://github.com/zhangxinyao88">
-  <img src="https://github-stats-extended.vercel.app/api?username=zhangxinyao88&show_icons=true&hide_rank=true&theme=transparent" alt="Xinyao's GitHub stats" />
+  <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
 </a>
