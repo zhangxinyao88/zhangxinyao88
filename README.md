@@ -21,8 +21,10 @@ Outside work, I'm interested in AI agents, CI/CD, developer experience, open sou
 | Repository | Organization | What it does |
 | --- | --- | --- |
 | [Apache Airflow](https://github.com/apache/airflow) | [Apache Software Foundation](https://github.com/apache) | A platform for developing, scheduling, and monitoring batch workflows |
-| [Sleeper](https://github.com/gchq/sleeper) | [GCHQ](https://github.com/gchq) | A serverless key-value store for large volumes of data stored in Amazon S3 |
+| [Apache Sedona](https://github.com/apache/sedona) | [Apache Software Foundation](https://github.com/apache) | A distributed geospatial computing system for large-scale data processing |
+| [Apache Arrow Rust](https://github.com/apache/arrow-rs) | [Apache Software Foundation](https://github.com/apache) | The native Rust implementation of Apache Arrow and related data-processing components |
 | [Fineract Backoffice UI](https://github.com/apache/fineract-backoffice-ui) | [Apache Software Foundation](https://github.com/apache) | An Angular back-office interface for Apache Fineract, an open source core banking platform |
+| [Sleeper](https://github.com/gchq/sleeper) | [GCHQ](https://github.com/gchq) | A serverless key-value store for large volumes of data stored in Amazon S3 |
 
 ## GitHub activity
 
