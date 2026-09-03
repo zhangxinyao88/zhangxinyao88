@@ -1,10 +1,17 @@
 # Xinyao Zhang
 
-Software engineer at [Bloomberg LP](https://www.bloomberg.com/company/), based in New York.
+Software engineer based in New York, working on distributed data systems.
 
-I build and support big-data ETL and processing systems. Most of my day-to-day work is in Java and Python across distributed storage, streaming, and compute.
+My day-to-day work centers on Spark, Hadoop, Java, and Python: building and
+supporting large-scale ETL and processing workloads across distributed storage
+and compute environments.
 
-Outside work, I'm interested in AI agents, CI/CD, developer experience, open source, and distributed systems.
+I am especially interested in:
+
+- Modern data platforms, including object storage and Iceberg-style lakehouse architectures.
+- Software quality at scale: static analysis, CI/CD, SonarQube, and developer tooling for JVM codebases.
+- Reliable agentic engineering workflows: grounded code-review assistance, evaluation, guardrails, and human review.
+- Open-source software and sustainable developer communities.
 
 ## Tech stack
 
