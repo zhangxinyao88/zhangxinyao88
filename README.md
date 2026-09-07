@@ -25,12 +25,14 @@ I am especially interested in:
 
 ## GitHub activity
 
-<a href="https://github.com/zhangxinyao88">
-  <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
-</a>
+<p>
+  <a href="https://github.com/zhangxinyao88">
+    <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
+  </a>
+</p>
 
 <!-- contributions:start -->
-<sub>
+<p><sub>
 Merged contribution footprint, last 12 months: <a href="https://github.com/apache/fineract-backoffice-ui">apache/fineract-backoffice-ui</a> · <a href="https://github.com/apache/solr">apache/solr</a> · <a href="https://github.com/gchq/sleeper">gchq/sleeper</a> · <a href="https://github.com/apache/sedona">apache/sedona</a> · <a href="https://github.com/apache/arrow-rs">apache/arrow-rs</a> · <a href="https://github.com/apache/security-dash">apache/security-dash</a>
-</sub>
+</sub></p>
 <!-- contributions:end -->

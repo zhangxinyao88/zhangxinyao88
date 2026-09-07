@@ -60,9 +60,9 @@ const repositories = [...contributions.reduce((byRepository, { mergedAt, reposit
 
 const content = repositories.length
   ? [
-      '<sub>',
+      '<p><sub>',
       `Merged contribution footprint, last 12 months: ${repositories.map(({ nameWithOwner, url }) => `<a href="${url}">${nameWithOwner}</a>`).join(' · ')}`,
-      '</sub>',
+      '</sub></p>',
     ].join('\n')
   : '_No merged public pull-request contributions in the past year._';
 
