@@ -1,4 +1,4 @@
-name: Update README cards
+name: Refresh profile contributions
 
 on:
   schedule:
@@ -20,15 +20,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
-      - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&theme=transparent
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate contribution links
+      - name: Generate contribution repository links
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_LOGIN: ${{ github.repository_owner }}
@@ -36,7 +28,7 @@ jobs:
 
       - name: Commit updated profile activity
         run: |
-          git add README.md profile/stats.svg
+          git add README.md
 
           if git diff --cached --quiet; then
             exit 0
@@ -44,5 +36,5 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update README activity"
+          git commit -m "chore: refresh contributed repositories"
           git push

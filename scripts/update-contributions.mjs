@@ -8,7 +8,7 @@ if (!login || !token) {
 }
 
 const query = `
-  query RecentPullRequests($login: String!, $from: DateTime!, $to: DateTime!) {
+  query ContributedRepositories($login: String!, $from: DateTime!, $to: DateTime!) {
     user(login: $login) {
       contributionsCollection(from: $from, to: $to) {
         pullRequestContributions(first: 100) {
@@ -50,29 +50,30 @@ if (!response.ok || result.errors) {
   throw new Error(`GitHub GraphQL query failed: ${JSON.stringify(result.errors ?? result)}`);
 }
 
-const escapeMarkdown = (value) => value.replace(/[\\|\r\n]/g, (character) => {
-  if (character === '|') return '\\|';
-  if (character === '\\') return '\\\\';
-  return ' ';
-});
-
 const contributions = result.data.user.contributionsCollection.pullRequestContributions.nodes
   .map(({ occurredAt, pullRequest }) => ({ occurredAt, ...pullRequest }))
   .filter(({ repository }) => repository)
-  .sort((a, b) => new Date(b.occurredAt) - new Date(a.occurredAt))
-  .slice(0, 12);
+  .sort((a, b) => new Date(b.occurredAt) - new Date(a.occurredAt));
 
-const rows = contributions.length
+const repositories = [...contributions.reduce((byRepository, { occurredAt, repository }) => {
+  if (!byRepository.has(repository.url)) {
+    byRepository.set(repository.url, { ...repository, occurredAt });
+  }
+  return byRepository;
+}, new Map()).values()].slice(0, 16);
+
+const content = repositories.length
   ? [
-      '| Repository | Pull request | Status | Date |',
-      '| --- | --- | --- | --- |',
-      ...contributions.map(({ occurredAt, number, repository, state, title, url, mergedAt }) => {
-        const status = mergedAt ? 'Merged' : state === 'OPEN' ? 'Open' : 'Closed';
-        const date = occurredAt.slice(0, 10);
-        return `| [${escapeMarkdown(repository.nameWithOwner)}](${repository.url}) | [#${number} ${escapeMarkdown(title)}](${url}) | ${status} | ${date} |`;
+      '_Repositories I have contributed to with a public pull request in the past year. Refreshed daily._',
+      '',
+      '<p>',
+      ...repositories.map(({ nameWithOwner, url }) => {
+        const label = encodeURIComponent(nameWithOwner);
+        return `  <a href="${url}"><img src="https://img.shields.io/badge/${label}-181717?style=for-the-badge&logo=github&logoColor=white" alt="${nameWithOwner}" /></a>`;
       }),
+      '</p>',
     ].join('\n')
-  : '_No public pull requests in the past year._';
+  : '_No public pull-request contributions in the past year._';
 
 const readme = await readFile('README.md', 'utf8');
 const start = '<!-- contributions:start -->';
@@ -82,4 +83,4 @@ if (!pattern.test(readme)) {
   throw new Error('Contribution markers were not found in README.md.');
 }
 
-await writeFile('README.md', readme.replace(pattern, `$1\n${rows}\n$2`));
+await writeFile('README.md', readme.replace(pattern, `$1\n${content}\n$2`));

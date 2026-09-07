@@ -33,27 +33,22 @@ I am especially interested in:
 | [Fineract Backoffice UI](https://github.com/apache/fineract-backoffice-ui) | [Apache Software Foundation](https://github.com/apache) | An Angular back-office interface for Apache Fineract, an open source core banking platform |
 | [Sleeper](https://github.com/gchq/sleeper) | [GCHQ](https://github.com/gchq) | A serverless key-value store for large volumes of data stored in Amazon S3 |
 
-## GitHub activity
-
-<a href="https://github.com/zhangxinyao88?tab=overview">
-  <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
-</a>
-
-### Recent public pull requests
+## Open-source contributions
 
 <!-- contributions:start -->
-| Repository | Pull request | Status | Date |
-| --- | --- | --- | --- |
-| [apache/spark](https://github.com/apache/spark) | [#58556 [SPARK-57128][SQL][TEST] Preserve commas in SQL test settings](https://github.com/apache/spark/pull/58556) | Open | 2026-09-07 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#525 docs: clarify contributor and agent workflows](https://github.com/apache/fineract-backoffice-ui/pull/525) | Open | 2026-09-06 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#480 feat(clients): add account CTAs to empty profile tabs](https://github.com/apache/fineract-backoffice-ui/pull/480) | Merged | 2026-09-05 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#479 test: remove deprecated Karma runner](https://github.com/apache/fineract-backoffice-ui/pull/479) | Merged | 2026-09-03 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#476 test(loans): migrate specs to Vitest](https://github.com/apache/fineract-backoffice-ui/pull/476) | Merged | 2026-09-01 |
-| [apache/solr](https://github.com/apache/solr) | [#4861 SOLR-18343: Require explicit HTTP methods for admin requests](https://github.com/apache/solr/pull/4861) | Merged | 2026-09-01 |
-| [apache/iceberg](https://github.com/apache/iceberg) | [#17912 AWS: Resolve relative storage credential refresh endpoint](https://github.com/apache/iceberg/pull/17912) | Open | 2026-09-01 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#474 test: migrate remaining product and loan-view specs to Vitest](https://github.com/apache/fineract-backoffice-ui/pull/474) | Merged | 2026-08-31 |
-| [apache/arrow-rs](https://github.com/apache/arrow-rs) | [#10923 Replace OffsetBufferBuilder with Vec in Avro decoder](https://github.com/apache/arrow-rs/pull/10923) | Closed | 2026-08-31 |
-| [gchq/sleeper](https://github.com/gchq/sleeper) | [#8015 7959 - Improve error message when artefacts deployment does not exist](https://github.com/gchq/sleeper/pull/8015) | Merged | 2026-08-31 |
-| [apache/sedona](https://github.com/apache/sedona) | [#3301 [GH-1764] Document Spark Connect server setup](https://github.com/apache/sedona/pull/3301) | Merged | 2026-08-30 |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | [#472 test: migrate product configuration specs to Vitest](https://github.com/apache/fineract-backoffice-ui/pull/472) | Merged | 2026-08-30 |
+_Repositories I have contributed to with a public pull request in the past year. Refreshed daily._
+
+<p>
+  <a href="https://github.com/apache/spark"><img src="https://img.shields.io/badge/apache%2Fspark-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/spark" /></a>
+  <a href="https://github.com/apache/fineract-backoffice-ui"><img src="https://img.shields.io/badge/apache%2Ffineract-backoffice-ui-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/fineract-backoffice-ui" /></a>
+  <a href="https://github.com/apache/solr"><img src="https://img.shields.io/badge/apache%2Fsolr-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/solr" /></a>
+  <a href="https://github.com/apache/iceberg"><img src="https://img.shields.io/badge/apache%2Ficeberg-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/iceberg" /></a>
+  <a href="https://github.com/apache/arrow-rs"><img src="https://img.shields.io/badge/apache%2Farrow-rs-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/arrow-rs" /></a>
+  <a href="https://github.com/gchq/sleeper"><img src="https://img.shields.io/badge/gchq%2Fsleeper-181717?style=for-the-badge&logo=github&logoColor=white" alt="gchq/sleeper" /></a>
+  <a href="https://github.com/apache/sedona"><img src="https://img.shields.io/badge/apache%2Fsedona-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/sedona" /></a>
+  <a href="https://github.com/apache/datasketches-rust"><img src="https://img.shields.io/badge/apache%2Fdatasketches-rust-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/datasketches-rust" /></a>
+  <a href="https://github.com/apache/airflow"><img src="https://img.shields.io/badge/apache%2Fairflow-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/airflow" /></a>
+  <a href="https://github.com/apache/datafusion"><img src="https://img.shields.io/badge/apache%2Fdatafusion-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/datafusion" /></a>
+  <a href="https://github.com/apache/security-dash"><img src="https://img.shields.io/badge/apache%2Fsecurity-dash-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/security-dash" /></a>
+</p>
 <!-- contributions:end -->
