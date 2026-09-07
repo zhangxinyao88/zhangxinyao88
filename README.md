@@ -23,32 +23,14 @@ I am especially interested in:
 | Streaming | <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Apache Kafka" /> |
 | Tooling | <img src="https://img.shields.io/badge/SonarQube-4E9BCD?style=flat-square&logo=sonarqubeserver&logoColor=white" alt="SonarQube" /> |
 
-## Repositories
+## GitHub activity
 
-| Repository | Organization | What it does |
-| --- | --- | --- |
-| [Apache Airflow](https://github.com/apache/airflow) | [Apache Software Foundation](https://github.com/apache) | A platform for developing, scheduling, and monitoring batch workflows |
-| [Apache Sedona](https://github.com/apache/sedona) | [Apache Software Foundation](https://github.com/apache) | A distributed geospatial computing system for large-scale data processing |
-| [Apache Arrow Rust](https://github.com/apache/arrow-rs) | [Apache Software Foundation](https://github.com/apache) | The native Rust implementation of Apache Arrow and related data-processing components |
-| [Fineract Backoffice UI](https://github.com/apache/fineract-backoffice-ui) | [Apache Software Foundation](https://github.com/apache) | An Angular back-office interface for Apache Fineract, an open source core banking platform |
-| [Sleeper](https://github.com/gchq/sleeper) | [GCHQ](https://github.com/gchq) | A serverless key-value store for large volumes of data stored in Amazon S3 |
-
-## Open-source contributions
+<a href="https://github.com/zhangxinyao88">
+  <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
+</a>
 
 <!-- contributions:start -->
-_Repositories I have contributed to with a public pull request in the past year. Refreshed daily._
-
-<p>
-  <a href="https://github.com/apache/spark"><img src="https://img.shields.io/badge/apache%2Fspark-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/spark" /></a>
-  <a href="https://github.com/apache/fineract-backoffice-ui"><img src="https://img.shields.io/badge/apache%2Ffineract-backoffice-ui-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/fineract-backoffice-ui" /></a>
-  <a href="https://github.com/apache/solr"><img src="https://img.shields.io/badge/apache%2Fsolr-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/solr" /></a>
-  <a href="https://github.com/apache/iceberg"><img src="https://img.shields.io/badge/apache%2Ficeberg-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/iceberg" /></a>
-  <a href="https://github.com/apache/arrow-rs"><img src="https://img.shields.io/badge/apache%2Farrow-rs-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/arrow-rs" /></a>
-  <a href="https://github.com/gchq/sleeper"><img src="https://img.shields.io/badge/gchq%2Fsleeper-181717?style=for-the-badge&logo=github&logoColor=white" alt="gchq/sleeper" /></a>
-  <a href="https://github.com/apache/sedona"><img src="https://img.shields.io/badge/apache%2Fsedona-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/sedona" /></a>
-  <a href="https://github.com/apache/datasketches-rust"><img src="https://img.shields.io/badge/apache%2Fdatasketches-rust-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/datasketches-rust" /></a>
-  <a href="https://github.com/apache/airflow"><img src="https://img.shields.io/badge/apache%2Fairflow-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/airflow" /></a>
-  <a href="https://github.com/apache/datafusion"><img src="https://img.shields.io/badge/apache%2Fdatafusion-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/datafusion" /></a>
-  <a href="https://github.com/apache/security-dash"><img src="https://img.shields.io/badge/apache%2Fsecurity-dash-181717?style=for-the-badge&logo=github&logoColor=white" alt="apache/security-dash" /></a>
-</p>
+<sub>
+Merged contribution footprint, last 12 months: <a href="https://github.com/apache/fineract-backoffice-ui">apache/fineract-backoffice-ui</a> · <a href="https://github.com/apache/solr">apache/solr</a> · <a href="https://github.com/gchq/sleeper">gchq/sleeper</a> · <a href="https://github.com/apache/sedona">apache/sedona</a> · <a href="https://github.com/apache/arrow-rs">apache/arrow-rs</a> · <a href="https://github.com/apache/security-dash">apache/security-dash</a>
+</sub>
 <!-- contributions:end -->

@@ -15,10 +15,6 @@ const query = `
           nodes {
             occurredAt
             pullRequest {
-              title
-              url
-              number
-              state
               mergedAt
               repository {
                 nameWithOwner
@@ -52,28 +48,23 @@ if (!response.ok || result.errors) {
 
 const contributions = result.data.user.contributionsCollection.pullRequestContributions.nodes
   .map(({ occurredAt, pullRequest }) => ({ occurredAt, ...pullRequest }))
-  .filter(({ repository }) => repository)
-  .sort((a, b) => new Date(b.occurredAt) - new Date(a.occurredAt));
+  .filter(({ mergedAt, repository }) => mergedAt && repository)
+  .sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt));
 
-const repositories = [...contributions.reduce((byRepository, { occurredAt, repository }) => {
+const repositories = [...contributions.reduce((byRepository, { mergedAt, repository }) => {
   if (!byRepository.has(repository.url)) {
-    byRepository.set(repository.url, { ...repository, occurredAt });
+    byRepository.set(repository.url, { ...repository, mergedAt });
   }
   return byRepository;
-}, new Map()).values()].slice(0, 16);
+}, new Map()).values()].slice(0, 12);
 
 const content = repositories.length
   ? [
-      '_Repositories I have contributed to with a public pull request in the past year. Refreshed daily._',
-      '',
-      '<p>',
-      ...repositories.map(({ nameWithOwner, url }) => {
-        const label = encodeURIComponent(nameWithOwner);
-        return `  <a href="${url}"><img src="https://img.shields.io/badge/${label}-181717?style=for-the-badge&logo=github&logoColor=white" alt="${nameWithOwner}" /></a>`;
-      }),
-      '</p>',
+      '<sub>',
+      `Merged contribution footprint, last 12 months: ${repositories.map(({ nameWithOwner, url }) => `<a href="${url}">${nameWithOwner}</a>`).join(' · ')}`,
+      '</sub>',
     ].join('\n')
-  : '_No public pull-request contributions in the past year._';
+  : '_No merged public pull-request contributions in the past year._';
 
 const readme = await readFile('README.md', 'utf8');
 const start = '<!-- contributions:start -->';
