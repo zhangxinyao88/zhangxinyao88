@@ -32,7 +32,14 @@ I am especially interested in:
 </p>
 
 <!-- contributions:start -->
-<p><sub>
-Merged contribution footprint, last 12 months: <a href="https://github.com/apache/fineract-backoffice-ui">apache/fineract-backoffice-ui</a> · <a href="https://github.com/apache/solr">apache/solr</a> · <a href="https://github.com/gchq/sleeper">gchq/sleeper</a> · <a href="https://github.com/apache/sedona">apache/sedona</a> · <a href="https://github.com/apache/arrow-rs">apache/arrow-rs</a> · <a href="https://github.com/apache/security-dash">apache/security-dash</a>
-</sub></p>
+### Merged contributions in the last 12 months
+
+| Repository | About |
+| --- | --- |
+| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | Angular back-office UI for Apache Fineract, the open-source core banking platform |
+| [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
+| [gchq/sleeper](https://github.com/gchq/sleeper) | A cloud-native, serverless, scalable, cheap key-value store |
+| [apache/sedona](https://github.com/apache/sedona) | A cluster computing framework for processing large-scale geospatial data |
+| [apache/arrow-rs](https://github.com/apache/arrow-rs) | Official Rust implementation of Apache Arrow |
+| [apache/security-dash](https://github.com/apache/security-dash) | Apache security |
 <!-- contributions:end -->

@@ -8,10 +8,14 @@ if (!login || !token) {
 }
 
 const query = `
-  query ContributedRepositories($login: String!, $from: DateTime!, $to: DateTime!) {
+  query ContributedRepositories($login: String!, $from: DateTime!, $to: DateTime!, $after: String) {
     user(login: $login) {
       contributionsCollection(from: $from, to: $to) {
-        pullRequestContributions(first: 100) {
+        pullRequestContributions(first: 100, after: $after) {
+          pageInfo {
+            endCursor
+            hasNextPage
+          }
           nodes {
             occurredAt
             pullRequest {
@@ -19,6 +23,7 @@ const query = `
               repository {
                 nameWithOwner
                 url
+                description
               }
             }
           }
@@ -32,21 +37,35 @@ const now = new Date();
 const from = new Date(now);
 from.setUTCFullYear(from.getUTCFullYear() - 1);
 
-const response = await fetch('https://api.github.com/graphql', {
-  method: 'POST',
-  headers: {
-    authorization: `bearer ${token}`,
-    'content-type': 'application/json',
-  },
-  body: JSON.stringify({ query, variables: { login, from: from.toISOString(), to: now.toISOString() } }),
-});
+const nodes = [];
+let after = null;
 
-const result = await response.json();
-if (!response.ok || result.errors) {
-  throw new Error(`GitHub GraphQL query failed: ${JSON.stringify(result.errors ?? result)}`);
-}
+do {
+  const response = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      authorization: `bearer ${token}`,
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ query, variables: { login, from: from.toISOString(), to: now.toISOString(), after } }),
+  });
 
-const contributions = result.data.user.contributionsCollection.pullRequestContributions.nodes
+  const result = await response.json();
+  if (!response.ok || result.errors) {
+    throw new Error(`GitHub GraphQL query failed: ${JSON.stringify(result.errors ?? result)}`);
+  }
+
+  const connection = result.data.user.contributionsCollection.pullRequestContributions;
+  nodes.push(...connection.nodes);
+  after = connection.pageInfo.hasNextPage ? connection.pageInfo.endCursor : null;
+} while (after);
+
+const escapeTableCell = (value) => (value ?? 'No description provided.')
+  .replace(/\\/g, '\\\\')
+  .replace(/\|/g, '\\|')
+  .replace(/[\r\n]+/g, ' ');
+
+const contributions = nodes
   .map(({ occurredAt, pullRequest }) => ({ occurredAt, ...pullRequest }))
   .filter(({ mergedAt, repository }) => mergedAt && repository)
   .sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt));
@@ -56,13 +75,15 @@ const repositories = [...contributions.reduce((byRepository, { mergedAt, reposit
     byRepository.set(repository.url, { ...repository, mergedAt });
   }
   return byRepository;
-}, new Map()).values()].slice(0, 12);
+}, new Map()).values()];
 
 const content = repositories.length
   ? [
-      '<p><sub>',
-      `Merged contribution footprint, last 12 months: ${repositories.map(({ nameWithOwner, url }) => `<a href="${url}">${nameWithOwner}</a>`).join(' · ')}`,
-      '</sub></p>',
+      '### Merged contributions in the last 12 months',
+      '',
+      '| Repository | About |',
+      '| --- | --- |',
+      ...repositories.map(({ nameWithOwner, url, description }) => `| [${escapeTableCell(nameWithOwner)}](${url}) | ${escapeTableCell(description)} |`),
     ].join('\n')
   : '_No merged public pull-request contributions in the past year._';
 
