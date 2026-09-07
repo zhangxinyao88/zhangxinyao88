@@ -28,9 +28,15 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit updated card
+      - name: Generate contribution links
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_LOGIN: ${{ github.repository_owner }}
+        run: node scripts/update-contributions.mjs
+
+      - name: Commit updated profile activity
         run: |
-          git add profile/stats.svg
+          git add README.md profile/stats.svg
 
           if git diff --cached --quiet; then
             exit 0
@@ -38,5 +44,5 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update README stats"
+          git commit -m "chore: update README activity"
           git push
