@@ -36,6 +36,7 @@ I am especially interested in:
 
 | Repository | About |
 | --- | --- |
+| [apache/datafusion](https://github.com/apache/datafusion) | Apache DataFusion SQL Query Engine |
 | [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | Angular back-office UI for Apache Fineract, the open-source core banking platform |
 | [apache/airflow](https://github.com/apache/airflow) | Apache Airflow - A platform to programmatically author, schedule, and monitor workflows |
 | [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
