@@ -36,6 +36,7 @@ I am especially interested in:
 
 | Repository | About |
 | --- | --- |
+| [apache/hudi](https://github.com/apache/hudi) | Upserts, Deletes And Incremental Processing on Big Data. |
 | [apache/datasketches-rust](https://github.com/apache/datasketches-rust) | A software library of stochastic streaming algorithms, a.k.a. sketches. |
 | [apache/airflow](https://github.com/apache/airflow) | Apache Airflow - A platform to programmatically author, schedule, and monitor workflows |
 | [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
