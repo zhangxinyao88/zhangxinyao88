@@ -36,6 +36,7 @@ I am especially interested in:
 
 | Repository | About |
 | --- | --- |
+| [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows) | Workflow Engine for Kubernetes |
 | [apache/parquet-java](https://github.com/apache/parquet-java) | Apache Parquet Java |
 | [apache/hudi](https://github.com/apache/hudi) | Upserts, Deletes And Incremental Processing on Big Data. |
 | [apache/datasketches-rust](https://github.com/apache/datasketches-rust) | A software library of stochastic streaming algorithms, a.k.a. sketches. |
