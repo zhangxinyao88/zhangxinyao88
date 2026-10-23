@@ -20,6 +20,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
+      - name: Verify contribution selection rules
+        run: node --test scripts/update-contributions.test.mjs
+
       - name: Generate contribution repository links
         env:
           GH_TOKEN: ${{ github.token }}
