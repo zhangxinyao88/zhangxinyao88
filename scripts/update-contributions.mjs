@@ -82,7 +82,7 @@ export function selectRepositories(repositories) {
   return [...repositories].sort((a, b) => b.commits - a.commits
     || b.activeMonths - a.activeMonths
     || b.latest.localeCompare(a.latest)
-    || a.nameWithOwner.localeCompare(b.nameWithOwner)).slice(0, 5);
+    || a.nameWithOwner.localeCompare(b.nameWithOwner)).slice(0, 10);
 }
 
 const escapeTableCell = (value) => (value ?? 'No description provided.')
@@ -93,14 +93,13 @@ export function renderContributions(repositories) {
   return [
     '### Open-source contributions',
     '',
-    'Top 5 external public projects by GitHub-recognized commit contributions over the past year,',
-    'with ties broken by active months and most recent commit date. Issues and unlanded PRs are excluded.',
+    'Public projects I have contributed commits to over the past year.',
     '',
     ...(repositories.length ? [
-      '| Repository | About | Commits | Active months | Latest commit (UTC) |',
-      '| --- | --- | ---: | ---: | --- |',
-      ...repositories.map(({ nameWithOwner, url, description, commits, activeMonths, latest }) =>
-        `| [${escapeTableCell(nameWithOwner)}](${url}) | ${escapeTableCell(description)} | ${commits} | ${activeMonths} | ${latest.slice(0, 10)} |`),
+      '| Repository | About |',
+      '| --- | --- |',
+      ...repositories.map(({ nameWithOwner, url, description }) =>
+        `| [${escapeTableCell(nameWithOwner)}](${url}) | ${escapeTableCell(description)} |`),
     ] : ['_No public commit contributions found in the past year._']),
   ].join('\n');
 }

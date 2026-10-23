@@ -40,14 +40,15 @@ test('commit totals and active months include Spark without requiring a merged P
   assert.equal(repositories[0].latest, '2026-10-01T00:00:00.000Z');
 });
 
-test('ranking uses commits, months, recency, then name, and shows at most five', () => {
+test('ranking uses commits, months, recency, then name, and shows at most ten', () => {
   const repo = (name, commits, activeMonths, latest = '2026-10-01') =>
     ({ nameWithOwner: name, commits, activeMonths, latest });
   const candidates = [repo('z', 3, 2), repo('a', 3, 2), repo('recent', 3, 2, '2026-10-02'),
-    repo('steady', 3, 3), repo('most', 4, 1), repo('tiny', 1, 1)];
+    repo('steady', 3, 3), repo('most', 4, 1), repo('tiny', 1, 1),
+    ...Array.from({ length: 5 }, (_, index) => repo(`x${index + 1}`, 1, 1, '2026-09-01'))];
   const original = [...candidates];
   assert.deepEqual(selectRepositories(candidates).map(({ nameWithOwner }) => nameWithOwner),
-    ['most', 'steady', 'recent', 'a', 'z']);
+    ['most', 'steady', 'recent', 'a', 'z', 'tiny', 'x1', 'x2', 'x3', 'x4']);
   assert.deepEqual(candidates, original);
 });
 
@@ -70,6 +71,7 @@ test('rendering keeps repository descriptions inside table cells and handles an 
   const markdown = renderContributions([{ nameWithOwner: 'org/repo', url: 'https://github.com/org/repo',
     description: 'test | <tag>\nnext $&', commits: 3, activeMonths: 2, latest: '2026-10-01T00:00:00Z' }]);
   assert.ok(markdown.includes('test \\| &lt;tag&gt; next $&amp;'));
-  assert.ok(markdown.includes('| 3 | 2 | 2026-10-01 |'));
+  assert.ok(markdown.includes('| Repository | About |\n| --- | --- |'));
+  assert.doesNotMatch(markdown, /Active months|Latest commit|\| Commits \|/);
   assert.match(renderContributions([]), /No public commit contributions/);
 });

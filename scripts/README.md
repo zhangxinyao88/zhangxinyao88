@@ -13,9 +13,13 @@ manual updates. GitPeak serves the statistics card independently.
   the most recent contribution day for each repository.
 - Sort by commit count descending, then active months descending, then most recent
   contribution date descending. Break remaining ties by repository name.
-- Display at most five repositories. There is no minimum count or hand-maintained
+- Display at most ten repositories. There is no minimum count or hand-maintained
   include/exclude list; a small contribution can still qualify if it ranks in the
-  top five.
+  top ten.
+
+The profile table shows only Repository and About. About comes directly from the
+repository's GitHub description, with table and HTML characters escaped for safe
+rendering. Commit counts, active months, and dates are used only for selection.
 
 These are GitHub-recognized commit contributions, independent of PR merge status.
 This covers projects such as Spark that land authored commits separately from
