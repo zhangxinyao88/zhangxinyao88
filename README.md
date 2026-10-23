@@ -26,27 +26,33 @@ I am especially interested in:
 ## GitHub activity
 
 <p>
-  <a href="https://github.com/zhangxinyao88">
-    <img src="./profile/stats.svg" alt="Xinyao's GitHub stats" />
+  <a href="https://gitpeak.vercel.app/?username=zhangxinyao88">
+    <img src="https://gitpeak.vercel.app/api/readme?username=zhangxinyao88" alt="Xinyao's GitHub stats on GitPeak" />
   </a>
 </p>
 
 <!-- contributions:start -->
-### Merged contributions in the last 12 months
+### Recent contribution repositories
+
+Public projects I have contributed to through commits, issues, or pull requests.
 
 | Repository | About |
 | --- | --- |
-| [apache/parquet-java](https://github.com/apache/parquet-java) | Apache Parquet Java |
-| [trinodb/trino](https://github.com/trinodb/trino) | Official repository of Trino, the distributed SQL query engine for big data, formerly known as PrestoSQL (https://trino.io) |
-| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | Angular back-office UI for Apache Fineract, the open-source core banking platform |
-| [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows) | Workflow Engine for Kubernetes |
-| [apache/hudi](https://github.com/apache/hudi) | Upserts, Deletes And Incremental Processing on Big Data. |
-| [apache/datasketches-rust](https://github.com/apache/datasketches-rust) | A software library of stochastic streaming algorithms, a.k.a. sketches. |
 | [apache/airflow](https://github.com/apache/airflow) | Apache Airflow - A platform to programmatically author, schedule, and monitor workflows |
-| [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
-| [apache/datafusion](https://github.com/apache/datafusion) | Apache DataFusion SQL Query Engine |
-| [gchq/sleeper](https://github.com/gchq/sleeper) | A cloud-native, serverless, scalable, cheap key-value store |
-| [apache/sedona](https://github.com/apache/sedona) | A cluster computing framework for processing large-scale geospatial data |
 | [apache/arrow-rs](https://github.com/apache/arrow-rs) | Official Rust implementation of Apache Arrow |
+| [apache/datafusion](https://github.com/apache/datafusion) | Apache DataFusion SQL Query Engine |
+| [apache/datasketches-rust](https://github.com/apache/datasketches-rust) | A software library of stochastic streaming algorithms, a.k.a. sketches. |
+| [apache/fineract-backoffice-ui](https://github.com/apache/fineract-backoffice-ui) | Angular back-office UI for Apache Fineract, the open-source core banking platform |
+| [apache/hudi](https://github.com/apache/hudi) | Upserts, Deletes And Incremental Processing on Big Data. |
+| [apache/iceberg](https://github.com/apache/iceberg) | Apache Iceberg |
+| [apache/kyuubi](https://github.com/apache/kyuubi) | Apache Kyuubi is a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses. |
+| [apache/parquet-java](https://github.com/apache/parquet-java) | Apache Parquet Java |
 | [apache/security-dash](https://github.com/apache/security-dash) | Apache security |
+| [apache/sedona](https://github.com/apache/sedona) | A cluster computing framework for processing large-scale geospatial data |
+| [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
+| [apache/spark](https://github.com/apache/spark) | Apache Spark - A unified analytics engine for large-scale data processing |
+| [apache/tsfile](https://github.com/apache/tsfile) | Apache TsFile |
+| [argoproj/argo-workflows](https://github.com/argoproj/argo-workflows) | Workflow Engine for Kubernetes |
+| [gchq/sleeper](https://github.com/gchq/sleeper) | A cloud-native, serverless, scalable, cheap key-value store |
+| [trinodb/trino](https://github.com/trinodb/trino) | Official repository of Trino, the distributed SQL query engine for big data, formerly known as PrestoSQL (https://trino.io) |
 <!-- contributions:end -->
