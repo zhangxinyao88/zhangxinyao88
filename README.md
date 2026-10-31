@@ -44,8 +44,8 @@ Public projects I have contributed commits to over the past year.
 | [apache/tsfile](https://github.com/apache/tsfile) | Apache TsFile |
 | [apache/parquet-java](https://github.com/apache/parquet-java) | Apache Parquet Java |
 | [apache/hudi](https://github.com/apache/hudi) | Upserts, Deletes And Incremental Processing on Big Data. |
+| [sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff) | A modular SQL linter and auto-formatter with support for multiple dialects and templated code. |
 | [trinodb/trino](https://github.com/trinodb/trino) | Official repository of Trino, the distributed SQL query engine for big data, formerly known as PrestoSQL (https://trino.io) |
 | [apache/airflow](https://github.com/apache/airflow) | Apache Airflow - A platform to programmatically author, schedule, and monitor workflows |
 | [apache/solr](https://github.com/apache/solr) | Apache Solr open-source search software |
-| [apache/arrow-rs](https://github.com/apache/arrow-rs) | Official Rust implementation of Apache Arrow |
 <!-- contributions:end -->
